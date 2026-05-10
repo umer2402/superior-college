@@ -284,6 +284,11 @@
     margin: 0 auto 36px;
 }
 
+.page-section .text-center + .row,
+.gallery-banner .row.align-items-center + .row {
+    margin-top: 0;
+}
+
 .gallery-banner {
     padding: 36px;
     border-radius: 24px;
