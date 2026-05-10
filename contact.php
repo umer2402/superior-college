@@ -1,3 +1,24 @@
+<?php
+function collegeImage(string $file): string
+{
+    return 'collegeImages/' . rawurlencode($file);
+}
+
+$previewImages = [
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.31 AM (1).jpeg',
+        'title' => 'Sports Gala Opening',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.38 AM.jpeg',
+        'title' => 'Sports Activity',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.42 AM.jpeg',
+        'title' => 'Student Development Campaign',
+    ],
+];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -98,7 +119,10 @@
                         <p class="mb-4">
                             We recommend reaching out during working hours for quicker assistance.
                         </p>
-                        <a href="mailto:info@thepearlgscmi.com" class="btn btn-light btn-lg">Send Email</a>
+                        <div class="button-row">
+                            <a href="mailto:info@thepearlgscmi.com" class="btn btn-light btn-lg">Send Email</a>
+                            <a href="gallery.php" class="btn btn-outline-light btn-lg">View Gallery</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,20 +131,30 @@
 
     <section class="page-section pt-0">
         <div class="container">
-            <div class="stats-strip">
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <h3 class="spinnaker-regular">Admissions</h3>
-                        <p class="mb-0">Guidance for new students and families.</p>
+            <div class="gallery-banner">
+                <div class="row align-items-center mb-4">
+                    <div class="col-lg-8">
+                        <h3 class="spinnaker-regular mb-2">A Quick Look at Campus Life</h3>
+                        <p class="mb-0">
+                            From sports activities to student development and special events, our campus environment stays active and student-focused.
+                        </p>
                     </div>
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <h3 class="spinnaker-regular">Support</h3>
-                        <p class="mb-0">Friendly communication and helpful information.</p>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="gallery.php" class="btn brand-button btn-lg">Open Full Gallery</a>
                     </div>
+                </div>
+
+                <div class="row g-4">
+                    <?php foreach ($previewImages as $item): ?>
                     <div class="col-md-4">
-                        <h3 class="spinnaker-regular">Campus</h3>
-                        <p class="mb-0">A learning environment built for growth.</p>
+                        <div class="photo-card">
+                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <div class="photo-body">
+                                <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            </div>
+                        </div>
                     </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

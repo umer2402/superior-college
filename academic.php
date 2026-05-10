@@ -1,3 +1,57 @@
+<?php
+function collegeImage(string $file): string
+{
+    return 'collegeImages/' . rawurlencode($file);
+}
+
+$academicAwards = [
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.29 AM.jpeg',
+        'tag' => 'Prize Distribution',
+        'title' => 'Student Recognition',
+        'text' => 'Academic effort is celebrated publicly so students stay motivated and proud of their progress.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.30 AM.jpeg',
+        'tag' => 'Achievement Moment',
+        'title' => 'Individual Appreciation',
+        'text' => 'We believe recognition matters because it encourages consistency, discipline, and healthy competition.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.38 AM (1).jpeg',
+        'tag' => 'Certificate Award',
+        'title' => 'Performance with Confidence',
+        'text' => 'Students are acknowledged for strong performance through certificates and public appreciation.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.39 AM.jpeg',
+        'tag' => 'Stage Recognition',
+        'title' => 'Achievement on Stage',
+        'text' => 'Our academic culture values both learning outcomes and the confidence students gain through recognition.',
+    ],
+];
+
+$academicPosters = [
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.31 AM.jpeg',
+        'tag' => 'Result Highlight',
+        'title' => 'Outstanding Exam Result',
+        'text' => 'Our result highlights reflect a strong academic environment and focused preparation.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.36 AM (1).jpeg',
+        'tag' => 'District Positions',
+        'title' => 'Merit and Excellence',
+        'text' => 'Top positions and outstanding merit are part of the academic story we continue to build.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.42 AM.jpeg',
+        'tag' => 'Student Development',
+        'title' => 'Learn to Earn',
+        'text' => 'Beyond academics, we also encourage practical growth, ambition, and future-facing thinking.',
+    ],
+];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,7 +80,10 @@
                     At Superior College Bhakkar, our academic environment is designed to help students
                     achieve strong results while developing the habits and confidence needed for future success.
                 </p>
-                <a href="contact.php" class="btn brand-button btn-lg mt-3">Talk to Admissions</a>
+                <div class="button-row mt-4">
+                    <a href="contact.php" class="btn brand-button btn-lg">Talk to Admissions</a>
+                    <a href="gallery.php" class="btn brand-outline btn-lg">View Gallery</a>
+                </div>
             </div>
         </div>
     </section>
@@ -97,8 +154,61 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="webImages/sports.jpg" class="img-fluid content-image" alt="Superior College student activities">
+                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>" class="img-fluid content-image" alt="Students taking part in an academic gathering">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section pt-0">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="page-title spinnaker-regular">Academic Highlights and Recognition</h2>
+                <p class="section-note">
+                    These moments reflect the way Superior College Bhakkar values academic performance,
+                    student confidence, and visible recognition for hard work.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <?php foreach ($academicAwards as $item): ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="photo-card">
+                        <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                        <div class="photo-body">
+                            <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
+                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section pt-0">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="page-title spinnaker-regular">Merit Boards and Growth Campaigns</h2>
+                <p class="section-note">
+                    Posters and result boards help communicate achievement clearly and build a culture where students aim higher.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <?php foreach ($academicPosters as $item): ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="photo-card poster-card">
+                        <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                        <div class="photo-body">
+                            <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
+                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -116,28 +226,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                        <a href="about.php" class="btn btn-light btn-lg">Learn More About Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section pt-0">
-        <div class="container">
-            <div class="stats-strip">
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <h3 class="spinnaker-regular">Interactive</h3>
-                        <p class="mb-0">Learning that keeps students engaged.</p>
-                    </div>
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <h3 class="spinnaker-regular">Focused</h3>
-                        <p class="mb-0">Academic routines that support performance.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="spinnaker-regular">Supportive</h3>
-                        <p class="mb-0">Teachers and staff committed to student growth.</p>
+                        <a href="gallery.php" class="btn btn-light btn-lg">See Full Academic Gallery</a>
                     </div>
                 </div>
             </div>

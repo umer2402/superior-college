@@ -1,3 +1,36 @@
+<?php
+function collegeImage(string $file): string
+{
+    return 'collegeImages/' . rawurlencode($file);
+}
+
+$campusEvents = [
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.32 AM (1).jpeg',
+        'tag' => 'Farewell Event',
+        'title' => 'Memorable Student Gatherings',
+        'text' => 'Our campus life includes meaningful events that celebrate students, teachers, and shared milestones.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.39 AM (1).jpeg',
+        'tag' => 'Official Gathering',
+        'title' => 'Leadership and Guidance',
+        'text' => 'Faculty and management remain closely connected to the student journey and college culture.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.43 AM (1).jpeg',
+        'tag' => 'Bonfire Event',
+        'title' => 'Community and Celebration',
+        'text' => 'Events like bonfires and stage gatherings help create a warmer and more memorable student experience.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.43 AM.jpeg',
+        'tag' => 'Campus Life',
+        'title' => 'Student Participation',
+        'text' => 'Students stay involved not only in academics, but also in collective activities that build confidence and belonging.',
+    ],
+];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,6 +59,10 @@
                     Superior College Bhakkar aims to create an educational experience where students
                     receive quality instruction, meaningful guidance, and the confidence to move toward a brighter future.
                 </p>
+                <div class="button-row mt-4">
+                    <a href="gallery.php" class="btn brand-button btn-lg">View Campus Gallery</a>
+                    <a href="contact.php" class="btn brand-outline btn-lg">Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
@@ -34,7 +71,7 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
-                    <img src="webImages/homeheaderimg.jpg" class="img-fluid content-image" alt="Superior College Bhakkar campus">
+                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.41 AM.jpeg'); ?>" class="img-fluid content-image" alt="Prize distribution ceremony at Superior College Bhakkar">
                 </div>
                 <div class="col-lg-6">
                     <div class="soft-panel">
@@ -86,42 +123,28 @@
         </div>
     </section>
 
-    <section class="page-section">
+    <section class="page-section pt-0">
         <div class="container">
+            <div class="text-center">
+                <h2 class="page-title spinnaker-regular">Campus Life and Special Events</h2>
+                <p class="section-note">
+                    The college environment becomes stronger when students feel part of a lively, respectful, and memorable campus culture.
+                </p>
+            </div>
+
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="page-card text-center">
-                        <div class="icon-badge">
-                            <span class="fa fa-star"></span>
+                <?php foreach ($campusEvents as $item): ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="photo-card">
+                        <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                        <div class="photo-body">
+                            <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
+                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
-                        <h5 class="spinnaker-regular">Academic Excellence</h5>
-                        <p class="mb-0">
-                            We encourage students to aim high and perform with consistency and confidence.
-                        </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="page-card text-center">
-                        <div class="icon-badge">
-                            <span class="fa fa-comments"></span>
-                        </div>
-                        <h5 class="spinnaker-regular">Open Communication</h5>
-                        <p class="mb-0">
-                            Clear communication among students, faculty, and parents remains one of our strengths.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="page-card text-center">
-                        <div class="icon-badge">
-                            <span class="fa fa-graduation-cap"></span>
-                        </div>
-                        <h5 class="spinnaker-regular">Holistic Development</h5>
-                        <p class="mb-0">
-                            Our environment supports personality growth, discipline, participation, and confidence building.
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -145,7 +168,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="webImages/pakmap.png" class="img-fluid content-image" alt="Superior campuses map">
+                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.42 AM (1).jpeg'); ?>" class="img-fluid content-image" alt="Award ceremony at Superior College Bhakkar">
                 </div>
             </div>
         </div>
