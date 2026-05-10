@@ -1,8 +1,5 @@
 <?php
-function collegeImage(string $file): string
-{
-    return 'collegeImages/' . rawurlencode($file);
-}
+require_once __DIR__ . '/includes/college-images.php';
 
 $previewImages = [
     [
@@ -147,8 +144,10 @@ $previewImages = [
                 <div class="row g-4">
                     <?php foreach ($previewImages as $item): ?>
                     <div class="col-md-4">
-                        <div class="photo-card">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                        <div class="photo-card uniform-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                            <div class="photo-media">
+                                <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            </div>
                             <div class="photo-body">
                                 <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
                             </div>
