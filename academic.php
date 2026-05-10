@@ -151,7 +151,7 @@ $academicPosters = [
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card image-card feature-image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>>
+                    <div class="card image-card feature-image-card border-0 shadow-sm" <?php echo collegeImageCardAttributes('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>>
                         <div class="photo-media">
                             <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>" class="img-fluid" alt="Students taking part in an academic gathering">
                         </div>
@@ -179,7 +179,7 @@ $academicPosters = [
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                 <?php foreach ($academicAwards as $item): ?>
                 <div class="col">
-                    <div class="card image-card uniform-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                    <div class="card image-card uniform-card border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
                             <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
@@ -207,7 +207,7 @@ $academicPosters = [
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
                 <?php foreach ($academicPosters as $item): ?>
                 <div class="col">
-                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                    <div class="card image-card border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
                             <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>

@@ -184,6 +184,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     aspect-ratio: 4 / 3;
     padding: 14px;
     background: linear-gradient(180deg, #f7fbfb 0%, #edf7f7 100%);
@@ -250,10 +251,6 @@
 
 .image-card .card-body,
 .photo-body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 10px;
     padding: 22px 20px;
 }
 
@@ -270,12 +267,11 @@
 .image-card .card-title,
 .photo-body h5,
 .photo-body h4 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .image-card .card-text,
 .photo-body p {
-    flex: 1;
     margin-bottom: 0;
 }
 
