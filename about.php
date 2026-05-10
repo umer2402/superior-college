@@ -50,7 +50,7 @@ $campusEvents = [
   <body>
     <?php include "includes/navbar.php"; ?>
 
-    <section class="page-hero" style="background: url('webImages/abcd.PNG') center/cover no-repeat;">
+    <section class="page-hero" style="background: url('<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.41 AM.jpeg'); ?>') center 28%/cover no-repeat;">
         <div class="container">
             <div class="page-hero-content">
                 <span class="page-tag spinnaker-regular">About Superior College</span>
