@@ -1,3 +1,33 @@
+<?php
+require_once __DIR__ . '/includes/college-images.php';
+
+$homePromos = [
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.31 AM.jpeg',
+        'tag' => 'Result Highlight',
+        'title' => 'Board Position Promotion',
+        'text' => 'A strong academic result highlight that reflects the college focus on preparation, discipline, and achievement.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.36 AM (1).jpeg',
+        'tag' => 'District Merit',
+        'title' => 'Top 3 Positions',
+        'text' => 'Celebrating district-level positions and high-performing students who represent academic excellence.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.37 AM.jpeg',
+        'tag' => 'Campus Event',
+        'title' => 'Sports Gala Promo',
+        'text' => 'A lively promotional visual for the sports gala, showing that student life here extends beyond the classroom.',
+    ],
+    [
+        'file' => 'WhatsApp Image 2026-05-10 at 10.01.42 AM.jpeg',
+        'tag' => 'Student Growth',
+        'title' => 'Learn to Earn',
+        'text' => 'A development-focused campaign encouraging students to connect learning with confidence, skills, and future goals.',
+    ],
+];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,9 +45,6 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="icon" href="webImages/logo.png" sizes="32x32" />
     
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/slider.css">
     <title>The pearls Group of Schools, Colleges &amp; Medical Sciences &#8211; Empowering Minds, Shaping Futures</title>
 
   </head>
@@ -75,6 +102,9 @@
         <div class="row">
             <div class="col-12">
                 <h4 class="text-center spinnaker-regular">Check out our latest promos!</h4>
+                <p class="text-center home-promo-intro">
+                    A quick look at the latest academic highlights, student development campaigns, and campus event promotions from Superior College Bhakkar.
+                </p>
             </div>
         </div>
     </div>
@@ -83,57 +113,25 @@
     <img src="webImages/shr.png" class="img-fluid py-2"> 
 </center>
 
-<!--slider-->
-<section>
-    <div class="slide-container swiper">
-    <div class="slide-content">
-      <div class="card-wrapper swiper-wrapper">
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s1.jpg" alt="" class="card-img">
-          </div>
+<section class="home-promo-section">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+            <?php foreach ($homePromos as $promo): ?>
+            <div class="col">
+                <div class="card home-promo-card border-0 h-100 shadow-sm" <?php echo collegeImageCardAttributes($promo['file']); ?>>
+                    <div class="home-promo-media">
+                        <img src="<?php echo collegeImage($promo['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($promo['title']); ?>">
+                    </div>
+                    <div class="card-body">
+                        <span class="home-promo-tag"><?php echo htmlspecialchars($promo['tag']); ?></span>
+                        <h5 class="spinnaker-regular"><?php echo htmlspecialchars($promo['title']); ?></h5>
+                        <p><?php echo htmlspecialchars($promo['text']); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
         </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s2.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s3.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s4.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s5.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s6.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s1.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s2.jpg" alt="" class="card-img">
-          </div>
-        </div>
-      </div>
     </div>
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
-  </div>
 </section>
 <section>
     <div class="container mt-5">
@@ -306,8 +304,5 @@
 </section>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/slider.js"></script>
-
   </body>
 </html>
