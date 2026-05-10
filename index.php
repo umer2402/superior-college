@@ -1,313 +1,230 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+$pageTitle = 'Superior College Bhakkar | Home';
+$pageDescription = 'Superior College Bhakkar brings together academic excellence, interactive learning, and a supportive student experience.';
+$currentPage = 'home';
+$useSlider = true;
 
-    <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link rel="icon" href="webImages/logo.png" sizes="32x32" />
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/slider.css">
-    <title>The pearls Group of Schools, Colleges &amp; Medical Sciences &#8211; Empowering Minds, Shaping Futures</title>
+include 'includes/header.php';
+?>
 
-  </head>
-  <body>
-      <!--Navbar-->
-<?php include "includes/navbar.php"; ?>
-<!--header-->
-<section style="position: relative; height: 100vh; overflow: hidden;">
-    <div style="background-image: url('webImages/homeheaderimg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.5;"></div>
-    <div class="container-fluid position-relative">
-        <div class="row">
-            <div class="col-12 text-center pt-5 mt-5">
-                <div class="background-div">
-                    <h1 class="my-5 py-5 spinnaker-regular">The Superior College Bhakkar</h1>
-                </div>
-            </div>
-            <div class="col-12 text-center">
-                <button class="btn btn-outline-success btn-lg">OUR ACADEMICS</button>
-                <button class="btn btn-success btn-lg">ABOUT US</button>
-            </div>
-        </div>
+<section class="hero-section">
+  <div class="hero-media" style="background-image: url('webImages/homeheaderimg.jpg');"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-panel">
+    <span class="eyebrow">Superior College Bhakkar</span>
+    <h1 class="hero-title spinnaker-regular">Empowering minds with confident, future-ready learning.</h1>
+    <p class="hero-copy">
+      We are building a student experience shaped by strong academics, interactive classrooms,
+      meaningful communication, and a culture that encourages every learner to grow with purpose.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-light btn-lg" href="academic.php">Explore Academics</a>
+      <a class="btn btn-brand-outline btn-lg" href="about.php">About the College</a>
     </div>
+    <div class="hero-badge-row">
+      <div class="hero-badge">
+        <strong>Academic Excellence</strong>
+        <span>Clear standards and disciplined learning habits.</span>
+      </div>
+      <div class="hero-badge">
+        <strong>Interactive Learning</strong>
+        <span>Classrooms that encourage curiosity and participation.</span>
+      </div>
+      <div class="hero-badge">
+        <strong>Student Growth</strong>
+        <span>Development that goes beyond exams and textbooks.</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-    <div class="container">
-        <div class="row text-center px-4">
-            <div class="col-4 card">
-                <center><img src="webImages/starts.png" class="img-fluid p-3 iconImages"></center>
-                <h5 class="spinnaker-regular">Academic Excellence</h5>
-                <p class="p-3">
-                    We consistently prioritize and achieves high standards of academic excellence.
-                </p>
-            </div>
-            <div class="col-4 cardc pt-5">
-                <center class="pt-3"><img src="webImages/books.png" class="img-fluid p-3 iconImages"></center>
-                <h5 class="spinnaker-regular">Interactive Learning</h5>
-                <p class="p-3">
-                    We promote inclusivity by valuing diversity and creating an environment where all students feel welcome and supported.
-                </p>
-            </div>
-            <div class="col-4 card">
-                <center><img src="webImages/msg.png" class="img-fluid p-3 iconImages"></center>
-                <h5 class="spinnaker-regular">Effective Communication</h5>
-                <p class="p-3">
-                    We prioritize clear and open communication among all stakeholders, including students, faculty, staff, and parents.
-                </p>
-            </div>
+<section class="overlap-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <img src="webImages/starts.png" alt="Academic excellence icon" class="icon-image">
+          <h3 class="spinnaker-regular">Academic Excellence</h3>
+          <p>We aim for strong educational outcomes through high expectations, consistency, and focused support.</p>
         </div>
-    </div>
-</section>
-<center><hr class="smallhr"></center>
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h4 class="text-center spinnaker-regular">Check out our latest promos!</h4>
-            </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card is-accent">
+          <img src="webImages/books.png" alt="Interactive learning icon" class="icon-image">
+          <h3 class="spinnaker-regular">Interactive Learning</h3>
+          <p>Students learn best when they participate, question, discuss, and stay engaged in the learning process.</p>
         </div>
-    </div>
-</section>
-<center>
-    <img src="webImages/shr.png" class="img-fluid py-2"> 
-</center>
-
-<!--slider-->
-<section>
-    <div class="slide-container swiper">
-    <div class="slide-content">
-      <div class="card-wrapper swiper-wrapper">
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s1.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s2.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s3.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s4.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s5.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s6.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s1.jpg" alt="" class="card-img">
-          </div>
-        </div>
-        <div class="card swiper-slide">
-          <div class="card-content">
-              <img src="sliderImages/s2.jpg" alt="" class="card-img">
-          </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="feature-card">
+          <img src="webImages/msg.png" alt="Communication icon" class="icon-image">
+          <h3 class="spinnaker-regular">Effective Communication</h3>
+          <p>Open communication among students, teachers, and families keeps progress clear and goals aligned.</p>
         </div>
       </div>
     </div>
-    <div class="swiper-button-next swiper-navBtn"></div>
-    <div class="swiper-button-prev swiper-navBtn"></div>
-    <div class="swiper-pagination"></div>
   </div>
 </section>
-<section>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 pt-5">
-                <img class="img-fluid float-end" src="webImages/pakmap.png">
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                <h1 class="spinnaker-regular mt-5 pt-5">Our Campuses</h1>
-                <ul class="ul">
-                   <li class="li">Superior College Campuse - Lahore Zone</li>
-                    <li class="li">Superior College Campuse - Sialkot Zone</li>
-                    <li class="li">Superior College Campuse - Gujranwala Zone</li>
-                    <li class="li">Superior College Campuse - DG-Khan Zone</li>
-                    <li class="li">Superior College Campuse - Bahawalpur Zone</li>
-                    <li class="li">Superior College Campuse - Okara Zone</li>
-                    <li class="li">Superior College Campuse - Sargodha Zone</li>
-                    <li class="li">Superior College Campuse - Faisalabad Zone</li>
-                    <li class="li">Superior College Campuse - Rawalpindi Zone</li>
-                    <li class="li">Superior College Campuse - Khyber Pakhtunkhwa Zone</li>
-                </ul>
-            </div>
-        </div>
+
+<section class="section-shell">
+  <div class="container">
+    <div class="section-heading centered">
+      <span class="section-kicker">Campus Moments</span>
+      <h2 class="section-title spinnaker-regular">Check out our latest highlights</h2>
+      <p class="section-copy mx-auto">
+        A quick look at student energy, campus life, and the moments that make learning here feel active and alive.
+      </p>
+      <div class="accent-divider"></div>
     </div>
-</section>
 
-<section>
-    <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-12">
-                <h4 class="text-center spinnaker-regular">Why Choose Us?</h4>
+    <div class="promo-frame">
+      <div class="promo-slider slide-container swiper">
+        <div class="slide-content">
+          <div class="swiper-wrapper">
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s1.jpg" alt="Campus highlight 1" class="card-img">
+              </div>
             </div>
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s2.jpg" alt="Campus highlight 2" class="card-img">
+              </div>
+            </div>
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s3.jpg" alt="Campus highlight 3" class="card-img">
+              </div>
+            </div>
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s4.jpg" alt="Campus highlight 4" class="card-img">
+              </div>
+            </div>
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s5.jpg" alt="Campus highlight 5" class="card-img">
+              </div>
+            </div>
+            <div class="promo-card swiper-slide">
+              <div class="card-content">
+                <img src="sliderImages/s6.jpg" alt="Campus highlight 6" class="card-img">
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
+  </div>
 </section>
-<center>
-    <img src="webImages/shr.png" class="img-fluid py-2"> 
-</center>
 
-<section>
-    <div class="container mt-5">
-        <div class="row">
-             <div class="col-lg-4 col-sm-12 col-md-6 p-3 text-center">
-                 <div class="bshadow">
-                     <center><img src="webImages/hand.png" class="img-fluid p-3 iconImages"></center>
-                     <h2 class="spinnaker-regular p-2">Exceptional Reputation</h2>
-                     <p class="p-4">
-                         We take immense pride in our unwavering commitment to academic excellence. Our rigorous curriculum is designed to challenge and inspire students, providing them with a solid foundation of knowledge and skills.
-                     </p>
-                 </div>
-                 
-             </div>
-             <div class="col-lg-4 col-sm-12 col-md-6 p-3 text-center">
-                 <div class="bshadow">
-                     <center><img src="webImages/build.png" class="img-fluid p-3 iconImages"></center>
-                     <h2 class="spinnaker-regular p-2">Cutting-Edge Facilities</h2>
-                     <p class="p-4">
-                         When you choose us, you choose an institution that seamlessly blends academic theory with real-world application.
-                     </p>
-                 </div>
-                 
-             </div>
-             <div class="col-lg-4 col-sm-12 col-md-6 p-3 text-center">
-                 <div class="bshadow">
-                     <center><img src="webImages/head.png" class="img-fluid p-3 iconImages"></center>
-                     <h2 class="spinnaker-regular p-2">Holistic Development Focus</h2>
-                     <p class="p-4">
-                         We understand that education is not just about textbooks and exams It's about nurturing well-rounded individuals. Our institute is committed to the holistic development of our students
-                     </p>
-                 </div>
-                 
-             </div>
+<section class="section-shell compact">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="image-panel">
+          <img src="webImages/pakmap.png" alt="Campus map illustration">
         </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <span class="section-kicker">Campus Presence</span>
+          <h2 class="section-title spinnaker-regular">A learning network that keeps growing</h2>
+          <p class="section-copy">
+            Our identity is rooted in strong local learning while staying connected to a wider network of campuses and academic communities.
+          </p>
+        </div>
+        <ul class="campus-list">
+          <li>Superior College Campus - Lahore Zone</li>
+          <li>Superior College Campus - Sialkot Zone</li>
+          <li>Superior College Campus - Gujranwala Zone</li>
+          <li>Superior College Campus - DG Khan Zone</li>
+          <li>Superior College Campus - Bahawalpur Zone</li>
+          <li>Superior College Campus - Okara Zone</li>
+          <li>Superior College Campus - Sargodha Zone</li>
+          <li>Superior College Campus - Faisalabad Zone</li>
+          <li>Superior College Campus - Rawalpindi Zone</li>
+          <li>Superior College Campus - Khyber Pakhtunkhwa Zone</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
 
-<section>
-    <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 pt-5">
-                <b class="text-success spinnaker-regular">Superior College</b>
-                <h2 class="spinnaker-regular">Where Learning Begins</h2>
-                <br>
-                <div class="d-flex">
-                <span class="fa fa-shield text-primary" style="font-size:24pt;"></span> &emsp; <h4><b>Co-Corricular Activities</b></h4></div>
-                <br><br>
-                <div class="d-flex">
-                <span class="fa fa-shield text-primary" style="font-size:24pt;"></span> &emsp; <h4><b>Competitions & Sports</b></h4></div>
-                
-                <br><br>
-                <button class="btn btn-success px-4 btn-lg">About Us</button>
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                <img src="webImages/sports.jpg" class="img-fluid">
-            </div>
-        </div>
+<section class="section-shell">
+  <div class="container">
+    <div class="section-heading centered">
+      <span class="section-kicker">Why Choose Us</span>
+      <h2 class="section-title spinnaker-regular">A learning environment built for steady growth</h2>
+      <p class="section-copy mx-auto">
+        We focus on more than classroom delivery. The goal is to help students learn deeply, communicate clearly, and grow confidently.
+      </p>
+      <div class="accent-divider"></div>
     </div>
-</section>
 
-
-<section style="background-image: url('webImages/abcd.PNG');">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12">
-                
-            </div>
-            <div class="col-lg-6 col-sm-12">
-                
-            </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card">
+          <img src="webImages/hand.png" alt="Exceptional reputation icon" class="icon-image">
+          <h3 class="spinnaker-regular">Exceptional Reputation</h3>
+          <p>
+            We value trust, consistency, and strong academic standards that help families feel confident about the learning journey.
+          </p>
         </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card surface">
+          <img src="webImages/build.png" alt="Facilities icon" class="icon-image">
+          <h3 class="spinnaker-regular">Learning with Practical Relevance</h3>
+          <p>
+            The college environment is designed to connect classroom effort with real confidence, real discipline, and real-world readiness.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="info-card">
+          <img src="webImages/head.png" alt="Holistic development icon" class="icon-image">
+          <h3 class="spinnaker-regular">Holistic Development</h3>
+          <p>
+            We encourage learners to grow academically, socially, and personally so they leave with stronger habits and wider ambition.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
-
-
-<section class="p-3 mt-5 text-center footer">
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-    
-                <!-- About -->
-                <div class="col-md-3">
-                    <h5 class="footer-title">About</h5>
-                    <p>
-                        The Superior Group of Colleges is committed to quality education 
-                        and student development across multiple campuses.
-                    </p>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="col-md-3">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Programs</a></li>
-                        <li><a href="#">Admissions</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Campuses -->
-                <div class="col-md-3">
-                    <h5 class="footer-title">Campuses</h5>
-                    <ul class="footer-links">
-                        <li>Lahore Zone</li>
-                        <li>Sialkot Zone</li>
-                        <li>Gujranwala Zone</li>
-                        <li>DG-Khan Zone</li>
-                    </ul>
-                </div>
-    
-                <!-- Contact -->
-                <div class="col-md-3">
-                    <h5 class="footer-title">Contact</h5>
-                    <p>Email: info@thepearlgscmi.com</p>
-                    <p>Phone: +92-XXX-XXXXXXX</p>
-                    <p>Pakistan</p>
-                </div>
-    
-            </div>
+<section class="section-shell compact">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="split-banner">
+          <span class="section-kicker text-white">Student Life</span>
+          <h2 class="spinnaker-regular">Where learning begins and confidence expands</h2>
+          <p class="lead">
+            Strong teaching matters, but so do co-curricular opportunities, competitions, sports, and the confidence students build through them.
+          </p>
+          <ul class="check-list shield-list mt-4">
+            <li>Co-curricular activities that widen student participation.</li>
+            <li>Competitions and sports that build teamwork and discipline.</li>
+            <li>A culture that values effort, expression, and character.</li>
+          </ul>
+          <div class="hero-actions mt-4">
+            <a class="btn btn-light" href="about.php">Discover More</a>
+            <a class="btn btn-brand-outline" href="contact.php">Talk to Us</a>
+          </div>
         </div>
-    
-        <!-- Bottom Bar -->
-        <div class="footer-bottom">
-            <p>© 2026 The Pearl Group. All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="image-panel">
+          <img src="webImages/sports.jpg" alt="Students participating in sports">
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
 </section>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/slider.js"></script>
 
-  </body>
-</html>
+<?php include 'includes/footer.php'; ?>

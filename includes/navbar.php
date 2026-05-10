@@ -1,42 +1,37 @@
-<nav class="navbar py-4 navbar-expand-lg navbar-dark bg-primary spinnaker-regular  sticky-top">
-  <div class="container-fluid">
+<?php $currentPage = $currentPage ?? ''; ?>
+<nav class="navbar navbar-dark navbar-expand-lg site-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-lg-none" href="index.php">
+      <img src="webImages/logo.png" alt="Superior College Bhakkar logo" class="site-logo">
+    </a>
 
-    <!-- Toggler button for mobile screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menus on the left + Sign Up button in collapse on mobile screens -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mb-2 mb-lg-0">
+      <ul class="navbar-nav me-lg-auto align-items-lg-center">
         <li class="nav-item">
-          <a class="nav-link active spinnaker-regular" aria-current="page" href="https://thepearlgscmi.com/">HOME</a>
+          <a class="nav-link <?php echo $currentPage === 'home' ? 'active' : ''; ?>" <?php echo $currentPage === 'home' ? 'aria-current="page"' : ''; ?> href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active spinnaker-regular" aria-current="page" href="academic.php">ACADEMIC</a>
+          <a class="nav-link <?php echo $currentPage === 'academic' ? 'active' : ''; ?>" <?php echo $currentPage === 'academic' ? 'aria-current="page"' : ''; ?> href="academic.php">Academics</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active spinnaker-regular" aria-current="page" href="about.php">ABOUT US</a>
+          <a class="nav-link <?php echo $currentPage === 'about' ? 'active' : ''; ?>" <?php echo $currentPage === 'about' ? 'aria-current="page"' : ''; ?> href="about.php">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active spinnaker-regular" aria-current="page" href="contact.php">CONTACT US</a>
+          <a class="nav-link <?php echo $currentPage === 'contact' ? 'active' : ''; ?>" <?php echo $currentPage === 'contact' ? 'aria-current="page"' : ''; ?> href="contact.php">Contact</a>
         </li>
       </ul>
 
-      <!-- Signup button - moves after menu items in mobile view -->
-      <div class="d-lg-none mt-3">
-        <button class="btn btn-outline-success  spinnaker-regular btn-sm px-5" type="button">Admission Form</button>
+      <a class="navbar-brand d-none d-lg-block mx-lg-4" href="index.php">
+        <img src="webImages/logo.png" alt="Superior College Bhakkar logo" class="site-logo">
+      </a>
+
+      <div class="d-flex flex-column flex-lg-row gap-3 align-items-lg-center ms-lg-auto pt-3 pt-lg-0">
+        <a class="btn btn-brand-outline btn-sm px-4" href="contact.php#admission">Admission Form</a>
       </div>
-    </div>
-
-    <!-- Logo in the center -->
-    <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
-      <img src="webImages/logo.png" alt="Logo" height="85">
-    </a>
-
-    <!-- Signup button on the right for larger screens -->
-    <div class="d-none d-lg-flex ms-auto">
-      <button class="btn btn-outline-light  spinnaker-regular btn-sm px-5" type="button">Admission Form</button>
     </div>
   </div>
 </nav>
