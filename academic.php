@@ -151,7 +151,16 @@ $academicPosters = [
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>" class="img-fluid content-image" alt="Students taking part in an academic gathering">
+                    <div class="card image-card feature-image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>>
+                        <div class="photo-media">
+                            <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.40 AM.jpeg'); ?>" class="img-fluid" alt="Students taking part in an academic gathering">
+                        </div>
+                        <div class="card-body">
+                            <span class="photo-tag">Academic Environment</span>
+                            <h5 class="card-title spinnaker-regular">Focused Learning Atmosphere</h5>
+                            <p class="card-text">A look at the active academic setting that supports concentration, participation, and student growth.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,17 +176,17 @@ $academicPosters = [
                 </p>
             </div>
 
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                 <?php foreach ($academicAwards as $item): ?>
-                <div class="col-lg-3 col-md-6">
-                    <div class="photo-card uniform-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card uniform-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -195,17 +204,17 @@ $academicPosters = [
                 </p>
             </div>
 
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
                 <?php foreach ($academicPosters as $item): ?>
-                <div class="col-lg-4 col-md-6">
-                    <div class="photo-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>

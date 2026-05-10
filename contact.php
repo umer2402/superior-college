@@ -141,15 +141,16 @@ $previewImages = [
                     </div>
                 </div>
 
-                <div class="row g-4">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
                     <?php foreach ($previewImages as $item): ?>
-                    <div class="col-md-4">
-                        <div class="photo-card uniform-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                    <div class="col">
+                        <div class="card image-card uniform-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                             <div class="photo-media">
-                                <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                                <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                             </div>
-                            <div class="photo-body">
-                                <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <div class="card-body">
+                                <span class="photo-tag">Campus Preview</span>
+                                <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
                             </div>
                         </div>
                     </div>

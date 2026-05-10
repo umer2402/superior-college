@@ -68,7 +68,16 @@ $campusEvents = [
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6">
-                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.41 AM.jpeg'); ?>" class="img-fluid content-image" alt="Prize distribution ceremony at Superior College Bhakkar">
+                    <div class="card image-card feature-image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes('WhatsApp Image 2026-05-10 at 10.01.41 AM.jpeg'); ?>>
+                        <div class="photo-media">
+                            <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.41 AM.jpeg'); ?>" class="img-fluid" alt="Prize distribution ceremony at Superior College Bhakkar">
+                        </div>
+                        <div class="card-body">
+                            <span class="photo-tag">Student Achievement</span>
+                            <h5 class="card-title spinnaker-regular">Recognition That Builds Confidence</h5>
+                            <p class="card-text">Celebrating student achievement is part of the culture that shapes motivation, belonging, and ambition.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="soft-panel">
@@ -129,17 +138,17 @@ $campusEvents = [
                 </p>
             </div>
 
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                 <?php foreach ($campusEvents as $item): ?>
-                <div class="col-lg-3 col-md-6">
-                    <div class="photo-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -167,7 +176,16 @@ $campusEvents = [
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.42 AM (1).jpeg'); ?>" class="img-fluid content-image" alt="Award ceremony at Superior College Bhakkar">
+                    <div class="card image-card feature-image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes('WhatsApp Image 2026-05-10 at 10.01.42 AM (1).jpeg'); ?>>
+                        <div class="photo-media">
+                            <img src="<?php echo collegeImage('WhatsApp Image 2026-05-10 at 10.01.42 AM (1).jpeg'); ?>" class="img-fluid" alt="Award ceremony at Superior College Bhakkar">
+                        </div>
+                        <div class="card-body">
+                            <span class="photo-tag">Campus Ceremony</span>
+                            <h5 class="card-title spinnaker-regular">Shared Moments of Recognition</h5>
+                            <p class="card-text">Events and award ceremonies help connect students, families, and faculty through memorable campus experiences.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

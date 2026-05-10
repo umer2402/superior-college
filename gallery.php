@@ -176,17 +176,17 @@ $campusEvents = [
                     These posters highlight academic positions, student performance, sports promotions, and development-focused campaigns.
                 </p>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                 <?php foreach ($achievementPosters as $item): ?>
-                <div class="col-lg-3 col-md-6">
-                    <div class="photo-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -203,17 +203,17 @@ $campusEvents = [
                     A major part of the college culture is to celebrate academic performance and encourage student confidence through recognition.
                 </p>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
                 <?php foreach ($prizeDistribution as $item): ?>
-                <div class="col-lg-4 col-md-6">
-                    <div class="photo-card uniform-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card uniform-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -230,17 +230,17 @@ $campusEvents = [
                     Sports activities, team spirit, and house competitions contribute strongly to a lively student environment.
                 </p>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                 <?php foreach ($sportsHighlights as $item): ?>
-                <div class="col-lg-3 col-md-6">
-                    <div class="photo-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
@@ -257,17 +257,17 @@ $campusEvents = [
                     Farewell programs, large student gatherings, and bonfire events add warmth and memorable experiences to campus life.
                 </p>
             </div>
-            <div class="row g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
                 <?php foreach ($campusEvents as $item): ?>
-                <div class="col-lg-4 col-md-6">
-                    <div class="photo-card" <?php echo collegeImageCardAttributes($item['file']); ?>>
+                <div class="col">
+                    <div class="card image-card h-100 border-0 shadow-sm" <?php echo collegeImageCardAttributes($item['file']); ?>>
                         <div class="photo-media">
-                            <img src="<?php echo collegeImage($item['file']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>">
+                            <img src="<?php echo collegeImage($item['file']); ?>" class="img-fluid" alt="<?php echo htmlspecialchars($item['title']); ?>">
                         </div>
-                        <div class="photo-body">
+                        <div class="card-body">
                             <span class="photo-tag"><?php echo htmlspecialchars($item['tag']); ?></span>
-                            <h5 class="spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
-                            <p><?php echo htmlspecialchars($item['text']); ?></p>
+                            <h5 class="card-title spinnaker-regular"><?php echo htmlspecialchars($item['title']); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($item['text']); ?></p>
                         </div>
                     </div>
                 </div>
